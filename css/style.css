@@ -1,0 +1,44 @@
+.loading-screen{
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+}
+.sideBar{
+    width: 20% !important;
+    position: fixed;
+    z-index: 1;
+    left: -210px;
+    transition: 0.5s;
+}
+.sideBarLinks{
+    overflow: hidden;
+}
+.barIcon{
+    cursor: pointer;
+}
+#sideBar a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.logo img{
+    width: 50px;
+    margin: 8px;
+}
+.main{
+    overflow: hidden;
+    cursor: pointer;
+}
+.shadow{
+    top: 100%;
+    background-color: #ffffffa1;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.main:hover .shadow{
+    top: 0;
+}
