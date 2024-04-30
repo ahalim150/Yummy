@@ -28,11 +28,13 @@ async function displayMeals(meals="", first_letter=false) {
   if (first_letter){
     let Response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${meals}`)
     myData = await Response.json()
+    document.getElementById("home").style.display = "";
     // console.log(myData)
   }
   else{
     let Response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${meals}`)
     myData = await Response.json()
+    document.getElementById("home").style.display = "";
     // console.log(myData)
   }
   
@@ -107,6 +109,8 @@ $(".sLink").click(()=>{
   $(".sideBar").css({ left:'-210px'});
   $(".closebtn").removeClass("fa-x").addClass("fa-align-justify");
   $(".links").addClass("animate__animated animate__bounce animate__fadeOutDownBig");
+  document.getElementById("home").style.display = "none";
+  document.getElementById("searchContainer").style.display = "";
   
   document.querySelector("#searchContainer").innerHTML = `
   <div class="row py-4 ">
@@ -138,6 +142,8 @@ $(".cLink").click(async ()=>{
   $(".sideBar").css({ left:'-210px'});
   $(".closebtn").removeClass("fa-x").addClass("fa-align-justify");
   $(".links").addClass("animate__animated animate__bounce animate__fadeOutDownBig");
+  document.getElementById("home").style.display = "";
+  document.getElementById("searchContainer").style.display = "none";
 
   let Response = await fetch(`https://www.themealdb.com/api/json/v1/1/categories.php`)
   myData = await Response.json()
@@ -190,6 +196,8 @@ $(".aLink").click(async ()=>{
   $(".sideBar").css({ left:'-210px'});
   $(".closebtn").removeClass("fa-x").addClass("fa-align-justify");
   $(".links").addClass("animate__animated animate__bounce animate__fadeOutDownBig");
+  document.getElementById("home").style.display = "";
+  document.getElementById("searchContainer").style.display = "none";
 
   let Response = await fetch(`https://www.themealdb.com/api/json/v1/1/list.php?a=list`)
   myData = await Response.json()
@@ -240,6 +248,8 @@ $(".iLink").click(async ()=>{
   $(".sideBar").css({ left:'-210px'});
   $(".closebtn").removeClass("fa-x").addClass("fa-align-justify");
   $(".links").addClass("animate__animated animate__bounce animate__fadeOutDownBig");
+  document.getElementById("home").style.display = "";
+  document.getElementById("searchContainer").style.display = "none";
 
   let Response = await fetch(`https://www.themealdb.com/api/json/v1/1/list.php?i=list`)
   myData = await Response.json()
@@ -295,6 +305,8 @@ $(".uLink").click(()=>{
   $(".sideBar").css({ left:'-210px'});
   $(".closebtn").removeClass("fa-x").addClass("fa-align-justify");
   $(".links").addClass("animate__animated animate__bounce animate__fadeOutDownBig");
+  document.getElementById("home").style.display = "";
+  document.getElementById("searchContainer").style.display = "none";
 
   cartoona = `
   <div class="contact min-vh-100 d-flex justify-content-center align-items-center">
